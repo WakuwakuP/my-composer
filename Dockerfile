@@ -11,7 +11,7 @@ RUN set -x && \
     update-locale LANG=ja_JP.UTF-8 LANGUAGE=”ja_JP:ja” && \
     apt-get install -y curl nodejs npm php7.2.7 php7.2.7-common php7.2.7-cli php7.2.7-fpm php7.2.7-mysql php7.2.7-dev php7.2.7-mbstring php7.2.7-zip php-xdebug && \
     echo zend_extension = "/usr/lib/php/20151012/xdebug.so" >> /etc/php/7.2.7/cli/php.ini && \
-    echo xdebug.remote_enable=on >> /etc/php/7.2.7/cli/php.ini && _
+    echo xdebug.remote_enable=on >> /etc/php/7.2.7/cli/php.ini && \
     npm cache clean && \
     npm install n -g && \
     n 8.11.3 && \
