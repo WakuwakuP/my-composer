@@ -11,6 +11,7 @@ RUN set -x && \
     apt-get install nodejs -yqq && \
     apt-get install chromium -yqq && \
     apt-get install fonts-ipafont-gothic fonts-ipafont-mincho -yqq && \
+    apt-get install openjdk-8-jdk -yqq && \
     pecl install xdebug && \
     docker-php-ext-enable xdebug && \
     curl -sS https://getcomposer.org/installer | php && \
