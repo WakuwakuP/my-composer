@@ -9,7 +9,7 @@ RUN set -x && \
     apt-get install software-properties-common && \
     add-apt-repository ppa:chromium-daily/stable && \
     apt-get update && \
-    apt-get install chromium-browser -y && \
+    apt-get install chromium -y && \
     apt-get install fonts-ipafont-gothic fonts-ipafont-mincho -y && \
     pecl install xdebug && \
     docker-php-ext-enable xdebug && \
