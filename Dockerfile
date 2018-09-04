@@ -8,12 +8,9 @@ RUN set -x && \
     docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2 opcache && \
     apt-get install chromium -y && \
     apt-get install fonts-ipafont-gothic fonts-ipafont-mincho -y && \
-    apt-get install nodejs npm -yqq && \
-    npm install n -g && \
-    n 8.11.3 && \
-    apt-get purge -y nodejs npm && \
-    ln -sf /usr/local/bin/node /usr/bin/node && \
-    ln -sf /usr/local/bin/npm /usr/bin/npm && \
+    apt-get install build-essential gnupg2 -y && \
+    curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+    apt-get install nodejs -yqq && \
     pecl install xdebug && \
     docker-php-ext-enable xdebug && \
     curl -sS https://getcomposer.org/installer | php && \
