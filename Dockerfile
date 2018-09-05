@@ -13,6 +13,8 @@ RUN set -x && \
     apt-get install fonts-ipafont-gothic fonts-ipafont-mincho -yqq && \
     mkdir -p /usr/share/man/man1 && \
     apt-get install openjdk-8-jdk -yqq && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
     pecl install xdebug && \
     docker-php-ext-enable xdebug && \
     curl -sS https://getcomposer.org/installer | php && \
