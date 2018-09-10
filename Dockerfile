@@ -10,6 +10,11 @@ RUN set -x && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install nodejs -yqq && \
     apt-get install chromium firefox-esr -yqq && \
+    wget -O FirefoxSetup.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" && \
+    mkdir /opt/firefox &&\
+    tar xjf FirefoxSetup.tar.bz2 -C /opt/firefox/ && \
+    mv /usr/lib/firefox-esr/firefox-esr /usr/lib/firefox-esr/firefox-esr_orig && \
+    ln -s /opt/firefox/firefox/firefox /usr/lib/firefox-esr/firefox-esr && \
     apt-get install fonts-ipafont-gothic fonts-ipafont-mincho -yqq && \
     mkdir -p /usr/share/man/man1 && \
     apt-get install openjdk-8-jdk -yqq && \
