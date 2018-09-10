@@ -9,9 +9,6 @@ RUN set -x && \
     apt-get install build-essential gnupg2 -yqq && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install nodejs -yqq && \
-    apt-get install -y software-properties-common && \
-    apt-add-repository -y ppa:mozillateam/firefox-next && \
-    sudo apt-get update && \
     apt-get install chromium firefox -yqq && \
     apt-get install fonts-ipafont-gothic fonts-ipafont-mincho -yqq && \
     mkdir -p /usr/share/man/man1 && \
